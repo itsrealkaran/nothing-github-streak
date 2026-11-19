@@ -36,5 +36,5 @@ def label(x, y, text, fill, size=13, tracking=0.4):
     return (
         f'<text x="{x}" y="{y}" fill="{fill}" '
         f'font-family="ui-monospace, Geist Mono, monospace" '
-        f'font-size="{size}" letter-spacing="{tracking}">{text}</text>'
+        f'font-size="{size}" letter-spacing="{tracking}" dominant-baseline="auto">{text}</text>'
     )
