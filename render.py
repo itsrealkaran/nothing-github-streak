@@ -83,7 +83,7 @@ def _stats(mode, colors, data, width, height, number, label_size, range_size, nu
 
 
 def _variant(card, login, mode, size, filename):
-    url = f"https://github.com/itsrealkaran/{card}?username={login}&theme={mode}&size={size}"
+    url = f"https://github.com/itsrealkaran/nothing-github-streak?username={login}&theme={mode}&size={size}"
     return [
         f"**{card}** · {mode} · {size}",
         "",
