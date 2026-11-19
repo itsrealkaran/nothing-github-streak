@@ -1,6 +1,6 @@
 # itsrealkaran
 
-Every mode and every size for this username.
+Compact is the current run. Regular is three numbers. Wide adds the glyph weeks.
 
 ## classic
 
@@ -15,6 +15,20 @@ Every mode and every size for this username.
 ### wide
 
 ![classic wide](dist/itsrealkaran/classic-wide.svg)
+
+## white
+
+### compact
+
+![white compact](dist/itsrealkaran/white-compact.svg)
+
+### regular
+
+![white regular](dist/itsrealkaran/white-regular.svg)
+
+### wide
+
+![white wide](dist/itsrealkaran/white-wide.svg)
 
 ## light
 
@@ -71,3 +85,4 @@ Every mode and every size for this username.
 ### wide
 
 ![yellow wide](dist/itsrealkaran/yellow-wide.svg)
+
