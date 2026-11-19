@@ -1,6 +1,6 @@
 # itsrealkaran
 
-Compact is the current run. Regular is three numbers. Wide adds the glyph weeks.
+Mini is the current run, drawn in the dot grid. Compact, regular, and wide put contributions, the current run, and the longest run in three columns.
 
 ## classic
 
