@@ -5,21 +5,54 @@ count toward stars and languages. Private repository names are never returned.
 """
 
 import json
+import os
 import subprocess
+import urllib.request
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
+API = "https://api.github.com/"
+
+
+def token():
+    return os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
+
+
+def _http(path, payload=None):
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "nothing-stat-card",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    tok = token()
+    if tok:
+        headers["Authorization"] = f"Bearer {tok}"
+    data = None
+    if payload is not None:
+        data = json.dumps(payload).encode()
+        headers["Content-Type"] = "application/json"
+    request = urllib.request.Request(API + path.lstrip("/"), data=data, headers=headers)
+    with urllib.request.urlopen(request) as response:
+        return json.load(response)
+
 
 def _gh(args):
-    raw = subprocess.check_output(["gh", "api", *args], text=True, stderr=subprocess.STDOUT)
+    path = args[0]
+    if token():
+        return _http(path)
+    raw = subprocess.check_output(["gh", "api", path], text=True, stderr=subprocess.STDOUT)
     return json.loads(raw)
 
 
 def _graphql(query, variables):
-    args = ["graphql", "-f", f"query={query}"]
-    for key, value in variables.items():
-        args.extend(["-f", f"{key}={value}"])
-    payload = _gh(args)
+    if token():
+        payload = _http("graphql", {"query": query, "variables": variables})
+    else:
+        args = ["graphql", "-f", f"query={query}"]
+        for key, value in variables.items():
+            args.extend(["-f", f"{key}={value}"])
+        raw = subprocess.check_output(["gh", "api", *args], text=True, stderr=subprocess.STDOUT)
+        payload = json.loads(raw)
     if payload.get("errors"):
         message = payload["errors"][0].get("message", "github query failed")
         raise SystemExit(message)
@@ -175,6 +208,7 @@ def streak(login):
         "current": current,
         "longest": longest,
         "longest_range": span,
+        "days": data["days"],
     }
 
 
