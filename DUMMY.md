@@ -1,6 +1,6 @@
 # itsrealkaran
 
-Username, mode, and size.
+Every mode and every size for this username.
 
 ## classic
 
