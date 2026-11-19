@@ -162,6 +162,7 @@ def contributions(login):
         "stars": stars,
         "stars_label": "stars on owned repos" if own else "stars on public repos",
         "since": info["created"].strftime("%b %Y"),
+        "created": info["created"],
         "days": all_days,
     }
 
@@ -195,21 +196,33 @@ def streak(login):
     today = datetime.now(timezone.utc).date()
     by_day = dict(parsed)
     cursor = today if by_day.get(today, 0) else today - timedelta(days=1)
+    current_start = current_end = None
     while by_day.get(cursor, 0) > 0:
+        if current_end is None:
+            current_end = cursor
+        current_start = cursor
         current += 1
         cursor -= timedelta(days=1)
-    if longest_start:
-        span = f"{longest_start.strftime('%b %-d')} to {longest_end.strftime('%b %-d')}"
-    else:
-        span = "No streak yet"
     return {
         "login": data["login"],
         "total": data["all_time"],
         "current": current,
         "longest": longest,
-        "longest_range": span,
+        "current_range": _day_span(current_start, current_end),
+        "longest_range": _day_span(longest_start, longest_end),
+        "total_range": f"Since {data['created'].strftime('%b %-d, %Y')}",
         "days": data["days"],
     }
+
+
+def _day_span(start, end):
+    if not start or not end:
+        return "No streak yet"
+    if start == end:
+        return start.strftime("%b %-d")
+    if start.year == end.year:
+        return f"{start.strftime('%b %-d')} to {end.strftime('%b %-d')}"
+    return f"{start.strftime('%b %-d, %Y')} to {end.strftime('%b %-d, %Y')}"
 
 
 def activity(login):
