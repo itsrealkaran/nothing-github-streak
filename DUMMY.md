@@ -4,113 +4,209 @@ Compact is the current run. Regular is three numbers. Wide adds the glyph weeks.
 
 ## classic
 
-### compact
+**streak** · classic · mini
 
-![classic compact](dist/itsrealkaran/classic-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic&size=mini`
 
-### regular
+![streak classic mini](dist/itsrealkaran/classic-mini.svg)
 
-![classic regular](dist/itsrealkaran/classic-regular.svg)
+**streak** · classic · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic&size=compact`
 
-![classic wide](dist/itsrealkaran/classic-wide.svg)
+![streak classic compact](dist/itsrealkaran/classic-compact.svg)
+
+**streak** · classic · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic&size=regular`
+
+![streak classic regular](dist/itsrealkaran/classic-regular.svg)
+
+**streak** · classic · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic&size=wide`
+
+![streak classic wide](dist/itsrealkaran/classic-wide.svg)
 
 ## classic-r
 
-### compact
+**streak** · classic-r · mini
 
-![classic-r compact](dist/itsrealkaran/classic-r-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic-r&size=mini`
 
-### regular
+![streak classic-r mini](dist/itsrealkaran/classic-r-mini.svg)
 
-![classic-r regular](dist/itsrealkaran/classic-r-regular.svg)
+**streak** · classic-r · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic-r&size=compact`
 
-![classic-r wide](dist/itsrealkaran/classic-r-wide.svg)
+![streak classic-r compact](dist/itsrealkaran/classic-r-compact.svg)
+
+**streak** · classic-r · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic-r&size=regular`
+
+![streak classic-r regular](dist/itsrealkaran/classic-r-regular.svg)
+
+**streak** · classic-r · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=classic-r&size=wide`
+
+![streak classic-r wide](dist/itsrealkaran/classic-r-wide.svg)
 
 ## white
 
-### compact
+**streak** · white · mini
 
-![white compact](dist/itsrealkaran/white-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white&size=mini`
 
-### regular
+![streak white mini](dist/itsrealkaran/white-mini.svg)
 
-![white regular](dist/itsrealkaran/white-regular.svg)
+**streak** · white · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white&size=compact`
 
-![white wide](dist/itsrealkaran/white-wide.svg)
+![streak white compact](dist/itsrealkaran/white-compact.svg)
+
+**streak** · white · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white&size=regular`
+
+![streak white regular](dist/itsrealkaran/white-regular.svg)
+
+**streak** · white · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white&size=wide`
+
+![streak white wide](dist/itsrealkaran/white-wide.svg)
 
 ## white-r
 
-### compact
+**streak** · white-r · mini
 
-![white-r compact](dist/itsrealkaran/white-r-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white-r&size=mini`
 
-### regular
+![streak white-r mini](dist/itsrealkaran/white-r-mini.svg)
 
-![white-r regular](dist/itsrealkaran/white-r-regular.svg)
+**streak** · white-r · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white-r&size=compact`
 
-![white-r wide](dist/itsrealkaran/white-r-wide.svg)
+![streak white-r compact](dist/itsrealkaran/white-r-compact.svg)
+
+**streak** · white-r · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white-r&size=regular`
+
+![streak white-r regular](dist/itsrealkaran/white-r-regular.svg)
+
+**streak** · white-r · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=white-r&size=wide`
+
+![streak white-r wide](dist/itsrealkaran/white-r-wide.svg)
 
 ## light
 
-### compact
+**streak** · light · mini
 
-![light compact](dist/itsrealkaran/light-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=light&size=mini`
 
-### regular
+![streak light mini](dist/itsrealkaran/light-mini.svg)
 
-![light regular](dist/itsrealkaran/light-regular.svg)
+**streak** · light · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=light&size=compact`
 
-![light wide](dist/itsrealkaran/light-wide.svg)
+![streak light compact](dist/itsrealkaran/light-compact.svg)
+
+**streak** · light · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=light&size=regular`
+
+![streak light regular](dist/itsrealkaran/light-regular.svg)
+
+**streak** · light · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=light&size=wide`
+
+![streak light wide](dist/itsrealkaran/light-wide.svg)
 
 ## red
 
-### compact
+**streak** · red · mini
 
-![red compact](dist/itsrealkaran/red-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=red&size=mini`
 
-### regular
+![streak red mini](dist/itsrealkaran/red-mini.svg)
 
-![red regular](dist/itsrealkaran/red-regular.svg)
+**streak** · red · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=red&size=compact`
 
-![red wide](dist/itsrealkaran/red-wide.svg)
+![streak red compact](dist/itsrealkaran/red-compact.svg)
+
+**streak** · red · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=red&size=regular`
+
+![streak red regular](dist/itsrealkaran/red-regular.svg)
+
+**streak** · red · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=red&size=wide`
+
+![streak red wide](dist/itsrealkaran/red-wide.svg)
 
 ## blue
 
-### compact
+**streak** · blue · mini
 
-![blue compact](dist/itsrealkaran/blue-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=blue&size=mini`
 
-### regular
+![streak blue mini](dist/itsrealkaran/blue-mini.svg)
 
-![blue regular](dist/itsrealkaran/blue-regular.svg)
+**streak** · blue · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=blue&size=compact`
 
-![blue wide](dist/itsrealkaran/blue-wide.svg)
+![streak blue compact](dist/itsrealkaran/blue-compact.svg)
+
+**streak** · blue · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=blue&size=regular`
+
+![streak blue regular](dist/itsrealkaran/blue-regular.svg)
+
+**streak** · blue · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=blue&size=wide`
+
+![streak blue wide](dist/itsrealkaran/blue-wide.svg)
 
 ## yellow
 
-### compact
+**streak** · yellow · mini
 
-![yellow compact](dist/itsrealkaran/yellow-compact.svg)
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=yellow&size=mini`
 
-### regular
+![streak yellow mini](dist/itsrealkaran/yellow-mini.svg)
 
-![yellow regular](dist/itsrealkaran/yellow-regular.svg)
+**streak** · yellow · compact
 
-### wide
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=yellow&size=compact`
 
-![yellow wide](dist/itsrealkaran/yellow-wide.svg)
+![streak yellow compact](dist/itsrealkaran/yellow-compact.svg)
+
+**streak** · yellow · regular
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=yellow&size=regular`
+
+![streak yellow regular](dist/itsrealkaran/yellow-regular.svg)
+
+**streak** · yellow · wide
+
+`https://github.com/itsrealkaran/streak?username=itsrealkaran&theme=yellow&size=wide`
+
+![streak yellow wide](dist/itsrealkaran/yellow-wide.svg)
 
