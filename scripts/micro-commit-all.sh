@@ -35,3 +35,7 @@ commit_paths "feat: add streak sample" sample.json
 commit_paths "feat: add streak renderer" render.py
 commit_paths "feat: add rendered modes" dist
 commit_paths "docs: describe the five modes" README.md index.html
+
+commit_paths "feat: load any github username" github_user.py
+commit_paths "feat: add size variants" nothing.py frame.py render.py
+commit_paths "docs: dummy readme of every variant" DUMMY.md dist
