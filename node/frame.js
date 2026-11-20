@@ -20,7 +20,7 @@ function dots(text, x, y, fill, scale = 2.4) {
         );
       }
     });
-    cursor += 5 * step + scale;
+    cursor += grid[0].length * step + scale;
   }
   return [parts.join(""), cursor - x];
 }

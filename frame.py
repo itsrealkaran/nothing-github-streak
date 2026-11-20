@@ -19,7 +19,7 @@ def dots(text, x, y, fill, scale=2.4):
                     parts.append(
                         f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{scale / 2:.2f}" fill="{fill}"/>'
                     )
-        cursor += 5 * step + scale
+        cursor += len(grid[0]) * step + scale
     return "".join(parts), cursor - x
 
 
