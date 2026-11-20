@@ -2,7 +2,7 @@
 
 The current run, the longest run, and the contribution total.
 
-Mini is the current run. Compact, regular, and wide put the total, the current run, and the longest run in three columns.
+Mini is the current run. Compact puts the current run and the longest run side by side. Regular and wide add the total, in three columns.
 
 An SVG for a GitHub profile. Place the URL in a README, on a site, or anywhere an image is allowed.
 
@@ -51,8 +51,8 @@ The current number is a dot grid. The total, the longest run, and the labels sta
 
 | Size | Dimensions | Contents |
 | --- | --- | --- |
-| `mini` | 220×148 | The current run only. |
-| `compact` | 495×168 | Three columns, each with its dates. |
+| `mini` | 220×148 | The current run, with its dates. |
+| `compact` | 495×168 | The current run and the longest run. |
 | `regular` | 495×195 | The same three columns, larger. Default. |
 | `wide` | 896×220 | The same three columns, larger again. |
 
