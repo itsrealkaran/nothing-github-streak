@@ -1,6 +1,6 @@
 # itsrealkaran
 
-Mini is the current run, drawn in the dot grid. Compact, regular, and wide put contributions, the current run, and the longest run in three columns.
+Mini is the current run, drawn in the dot grid. Compact puts the current run and the longest run side by side. Regular and wide add the total.
 
 ## classic
 
