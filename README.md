@@ -53,7 +53,7 @@ The current number is a dot grid. The total, the longest run, and the labels sta
 | --- | --- | --- |
 | `mini` | 220×148 | The current run, with its dates. |
 | `compact` | 495×168 | The current run and the longest run. |
-| `regular` | 440×195 | The same three columns, larger. Default. |
+| `regular` | 408×195 | The same three columns, larger. Default. |
 | `wide` | 896×220 | The same three columns, larger again. |
 
 The files in `dist/` use the theme name, then the size: `classic-regular.svg`.
