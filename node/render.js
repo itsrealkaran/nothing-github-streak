@@ -13,7 +13,7 @@ function render(mode, size, data, border = true) {
   if (size === "wide") {
     return stats(mode, colors, data, 896, 220, 40, 13, 12, 120, 164, 184, 5.4, 56, 200, false, data.current === 1 ? "DAY" : "DAYS", border);
   }
-  return stats(mode, colors, data, 408, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178, false, "D", border);
+  return stats(mode, colors, data, 408, 195, 22, 12, 11, 108, 146, 164, 4.2, 56, 178, false, "D", border);
 }
 
 function mini(mode, colors, data, border) {
