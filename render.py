@@ -48,7 +48,7 @@ def _compact(mode, colors, data, border):
 
 
 def _regular(mode, colors, data, border):
-    return _stats(mode, colors, data, 440, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178, border=border)
+    return _stats(mode, colors, data, 408, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178, border=border)
 
 
 def _wide(mode, colors, data, border):
