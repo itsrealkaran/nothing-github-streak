@@ -4,19 +4,19 @@ const { dots, label, openSvg } = require("./frame");
 const { theme } = require("./nothing");
 const { commas, div, f, fixed, mul, pyRound, sub } = require("./format");
 
-function render(mode, size, data) {
+function render(mode, size, data, border = true) {
   const colors = theme(mode);
-  if (size === "mini") return mini(mode, colors, data);
+  if (size === "mini") return mini(mode, colors, data, border);
   if (size === "compact") {
-    return stats(mode, colors, data, 495, 168, 22, 11, 10, 96, 124, 140, 3.2, 52, 152, true, data.current === 1 ? "DAY" : "DAYS");
+    return stats(mode, colors, data, 495, 168, 22, 11, 10, 96, 124, 140, 3.2, 52, 152, true, data.current === 1 ? "DAY" : "DAYS", border);
   }
   if (size === "wide") {
-    return stats(mode, colors, data, 896, 220, 40, 13, 12, 120, 164, 184, 5.4, 56, 200, false, data.current === 1 ? "DAY" : "DAYS");
+    return stats(mode, colors, data, 896, 220, 40, 13, 12, 120, 164, 184, 5.4, 56, 200, false, data.current === 1 ? "DAY" : "DAYS", border);
   }
-  return stats(mode, colors, data, 495, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178);
+  return stats(mode, colors, data, 440, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178, false, "D", border);
 }
 
-function mini(mode, colors, data) {
+function mini(mode, colors, data, border) {
   const scale = 4;
   const step = scale + 1.1;
   const [name] = dots("STREAK", 28, 12, colors.fg, 1.15);
@@ -27,7 +27,7 @@ function mini(mode, colors, data) {
   const unitTop = 76 + (6 * step + scale) - (6 * (unitScale + 1.1) + unitScale);
   const [days] = dots(unit, 52 + width - step + 6, unitTop, colors.figure, unitScale);
   return [
-    openSvg(mode, 220, 148, data.login + " streak", 6, 14),
+    openSvg(mode, 220, 148, data.login + " streak", 6, 14, border),
     name,
     fire,
     figure,
@@ -61,7 +61,7 @@ function currentMark(text, center, baseline, size, colors, scale, unit) {
   return fire + figure + mark;
 }
 
-function stats(mode, colors, data, width, height, number, labelSize, rangeSize, numberY, labelY, rangeY, scale, ruleTop, ruleBottom, pair, unit = "D") {
+function stats(mode, colors, data, width, height, number, labelSize, rangeSize, numberY, labelY, rangeY, scale, ruleTop, ruleBottom, pair, unit = "D", border = true) {
   const [name] = dots("STREAK", 40, 16, colors.fg, 1.8);
   const columns = [
     [String(data.current), "Current", data.current_range, true],
@@ -70,7 +70,7 @@ function stats(mode, colors, data, width, height, number, labelSize, rangeSize, 
   if (!pair) columns.unshift([commas(data.total), "Contributions", data.total_range, false]);
   const span = div(width, columns.length);
   const centers = columns.map((_, index) => pyRound(mul(span, index + 0.5), 1));
-  const parts = [openSvg(mode, width, height, data.login + " streak"), name];
+  const parts = [openSvg(mode, width, height, data.login + " streak", 8, 20, border), name];
   columns.slice(1).forEach((_, index) => {
     const ruleX = pyRound(mul(span, index + 1), 1);
     parts.push(

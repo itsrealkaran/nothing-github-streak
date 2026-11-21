@@ -10,18 +10,18 @@ from nothing import MODES, SIZES, theme
 ROOT = Path(__file__).resolve().parent
 
 
-def render(mode, size, data):
+def render(mode, size, data, border=True):
     colors = theme(mode)
     if size == "mini":
-        return _mini(mode, colors, data)
+        return _mini(mode, colors, data, border)
     if size == "compact":
-        return _compact(mode, colors, data)
+        return _compact(mode, colors, data, border)
     if size == "wide":
-        return _wide(mode, colors, data)
-    return _regular(mode, colors, data)
+        return _wide(mode, colors, data, border)
+    return _regular(mode, colors, data, border)
 
 
-def _mini(mode, colors, data):
+def _mini(mode, colors, data, border):
     scale = 4
     step = scale + 1.1
     name, _ = dots("STREAK", 28, 12, colors["fg"], scale=1.15)
@@ -32,7 +32,7 @@ def _mini(mode, colors, data):
     unit_top = 76 + (6 * step + scale) - (6 * (unit_scale + 1.1) + unit_scale)
     days, _width = dots(unit, 52 + width - step + 6, unit_top, colors["figure"], scale=unit_scale)
     return "\n".join([
-        open_svg(mode, 220, 148, f"{data['login']} streak", mark=6, margin=14),
+        open_svg(mode, 220, 148, f"{data['login']} streak", mark=6, margin=14, border=border),
         name,
         fire,
         figure,
@@ -42,18 +42,18 @@ def _mini(mode, colors, data):
     ])
 
 
-def _compact(mode, colors, data):
+def _compact(mode, colors, data, border):
     unit = "DAY" if data["current"] == 1 else "DAYS"
-    return _stats(mode, colors, data, 495, 168, 22, 11, 10, 96, 124, 140, 3.2, 52, 152, pair=True, unit=unit)
+    return _stats(mode, colors, data, 495, 168, 22, 11, 10, 96, 124, 140, 3.2, 52, 152, pair=True, unit=unit, border=border)
 
 
-def _regular(mode, colors, data):
-    return _stats(mode, colors, data, 495, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178)
+def _regular(mode, colors, data, border):
+    return _stats(mode, colors, data, 440, 195, 28, 12, 11, 108, 146, 164, 4.2, 56, 178, border=border)
 
 
-def _wide(mode, colors, data):
+def _wide(mode, colors, data, border):
     unit = "DAY" if data["current"] == 1 else "DAYS"
-    return _stats(mode, colors, data, 896, 220, 40, 13, 12, 120, 164, 184, 5.4, 56, 200, unit=unit)
+    return _stats(mode, colors, data, 896, 220, 40, 13, 12, 120, 164, 184, 5.4, 56, 200, unit=unit, border=border)
 
 
 def _current(text, center, baseline, size, colors, scale, unit="D"):
@@ -79,7 +79,7 @@ def _current(text, center, baseline, size, colors, scale, unit="D"):
     return fire + figure + unit_drawn
 
 
-def _stats(mode, colors, data, width, height, number, label_size, range_size, number_y, label_y, range_y, scale, rule_top, rule_bottom, pair=False, unit="D"):
+def _stats(mode, colors, data, width, height, number, label_size, range_size, number_y, label_y, range_y, scale, rule_top, rule_bottom, pair=False, unit="D", border=True):
     """Current and longest on compact. Regular and wide add the total."""
     name, _ = dots("STREAK", 40, 16, colors["fg"], scale=1.8)
     columns = (
@@ -90,7 +90,7 @@ def _stats(mode, colors, data, width, height, number, label_size, range_size, nu
         columns = ((f"{data['total']:,}", "Contributions", data["total_range"], False),) + columns
     span = width / len(columns)
     centers = tuple(round(span * (index + 0.5), 1) for index in range(len(columns)))
-    parts = [open_svg(mode, width, height, f"{data['login']} streak"), name]
+    parts = [open_svg(mode, width, height, f"{data['login']} streak", border=border), name]
     for index in range(1, len(columns)):
         rule_x = round(span * index, 1)
         parts.append(
